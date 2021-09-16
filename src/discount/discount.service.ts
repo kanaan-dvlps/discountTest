@@ -17,7 +17,7 @@ export class DiscountService {
       statusCode: null,
       message: ''
     };
-    
+
     const productDiscount = await this.discount.find({ _id: id, hasDiscount: { $ne: true }}); 
     const mainCategoryDiscount = await this.secondCategory.find({ _id: id, hasDiscount: { $ne: true }});
     const categoryDiscount = await this.firstCategory.find({ _id: id, hasDiscount: { $ne: true }});
