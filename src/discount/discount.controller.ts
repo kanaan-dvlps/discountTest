@@ -5,7 +5,7 @@ import { DiscountService } from './discount.service';
 export class DiscountController {
   constructor(private readonly service: DiscountService) { }
 
-  @Post('/add/:id/:id/:id')
+  @Post('/add/product/:id/mainCategory/:id/secondaryCategory/:id')
   updateCategoryDiscount(@Body() Body, @Param('id') productId: string, @Param('id') mainCatId: string, @Param('id') secondCatId: string) {
     console.log({Body});
     return this.service.updateCategoryDiscount({Body, productId, mainCatId, secondCatId});
