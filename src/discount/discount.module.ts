@@ -5,6 +5,7 @@ import { DiscountModel } from 'src/Schemas/DiscountModel.schema';
 import { CategoryOne } from 'src/Schemas/CategoryOne.schema';
 import { CategoryTwo } from 'src/Schemas/CategoryTwo.schema';
 import { UserModel } from 'src/Schemas/User.schema';
+import { ProductModel } from 'src/Schemas/Product.schema';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
@@ -13,7 +14,8 @@ import { MongooseModule } from '@nestjs/mongoose';
       {name: 'Discount', schema: DiscountModel}, 
       {name: 'User', schema: UserModel}, 
       {name: 'FirstCategory', schema: CategoryOne}, 
-      {name: 'SecondCategory', schema: CategoryTwo}
+      {name: 'SecondCategory', schema: CategoryTwo},
+      {name: 'Product', schema: ProductModel},
     ])],
   controllers: [DiscountController],
   providers: [DiscountService]

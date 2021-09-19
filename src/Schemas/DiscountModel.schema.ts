@@ -19,8 +19,6 @@ export class Discount {
   hasDiscount: boolean;
   @Prop({ default: false })
   isDiscountActive: boolean;
-  @Prop({ type: Types.ObjectId, ref: 'CategoryOne' })
-  parent: CategoryOneDocument;
 }
 
 export const DiscountModel = SchemaFactory.createForClass(Discount);
